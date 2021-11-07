@@ -47,97 +47,97 @@ Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1
 */
 
 
-const multiplicador = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 
 // TABLA DEL 1 
 
 function tablaDelUno(){
-for (let i = 0; i< multiplicador.length; i++){
+for (let i = 1; i< 10; i++){
     const multiplicando = 1
-    const resultado = multiplicando * multiplicador[i];
-    console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
 }
 }
 
 // TABLA DEL 2
 
 function tablaDelDos(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 2
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 2
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 3
 
 function tablaDelTres(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 3
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 3
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 4
 
 function tablaDelCuatro(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 4
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 4
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 5
 
 function tablaDelCinco(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 5
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 5
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 6
 
 function tablaDelSeis(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 6
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 6
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 7
 
 function tablaDelSiete(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 7
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 7
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 8
 
 function tablaDelOcho(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 8
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 8
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 // TABLA DEL 9
 
 function tablaDelNueve(){
-for (let i = 0; i< multiplicador.length; i++){
-  const multiplicando = 9
-  const resultado = multiplicando * multiplicador[i];
-  console.log(`${multiplicando} * ${multiplicador[i]} = ${resultado}`);
-}
-}
+  for (let i = 1; i< 10; i++){
+      const multiplicando = 9
+      const resultado = multiplicando * i;
+      console.log(`${multiplicando} * ${i} = ${resultado}`);
+  }
+  }
 
 
 /*
@@ -157,7 +157,7 @@ tablaDelNueve()
 
 //Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  
-[1,2,3,4,5,6,7,8,9,10]
+//[1,2,3,4,5,6,7,8,9,10]
 
 
 // 1 + 2 + 3 + ... + 10 = ? //hacerlo con un array y un bucle
