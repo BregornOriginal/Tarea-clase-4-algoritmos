@@ -154,7 +154,7 @@ tablaDelNueve()
 */
 
 
-
+/*
 //Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
  
 //[1,2,3,4,5,6,7,8,9,10]
@@ -171,27 +171,89 @@ for(let i = 0; i<numeros.length; i++){
 
 console.log(resultado);
 
-
+*/
 
 /* 
 Desafío de programación #6: Calcula 10! (10 factorial)
 
  10 * 9 * 8 * ... * 1
 
-Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
+const numeros = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+let resultado = 10
 
-Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
+for (let i = 0; i<numeros.length; i++){
+    resultado = resultado * numeros[i];
+}
 
-Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+console.log(resultado);
 
-Desafío de programación #10: Calcula la suma de todos los números en un array de números
+*/
 
-Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+/*
+//Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
-Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+for (let i = 11; i > 10 && i < 30; i = i + 2 ){
+  console.log(i);
+}
 
-Desafío de programación #13: Find the maximum number in an array of numbers
+*/
+//Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
+/*
+
+function convertirTemperaturaCelciusAFahrenheit(){
+  let gradosCelcius = Number(prompt ("Escriba los °Celcius que desee convertir a °Fahrenheit"));
+  let gradosFahrenheit = 32;
+    return gradosCelcius + gradosFahrenheit;
+}
+
+
+
+alert("La temperatura en °Fahrenheit es de " + convertirTemperaturaCelciusAFahrenheit() + "°");
+                           
+*/
+//Desafío de programación #9: Crea una función que convierta de Fahrenheit a Celsius
+
+/*
+function convertirTemperaturaFahrenheitACelcius(){
+  let gradosFahrenheit = Number(prompt ("Escriba los °Fahrenheit que desee convertir a °Celcius"));
+  let gradosCelcius = 32;
+    return gradosFahrenheit - gradosCelcius;
+}
+
+alert("La temperatura en °Celcius es de " + convertirTemperaturaFahrenheitACelcius() + "°");
+
+*/
+/*
+//Desafío de programación #10: Calcula la suma de todos los números en un array de números
+
+const numeros = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let resultado = 0;
+
+for ( let i = 0; i < numeros.length; i++){
+    resultado = resultado + numeros[i];
+    console.log(`${resultado}`);
+}
+
+*/
+/*
+//Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
+
+const numeros = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let resultado = 0;
+
+function promedioDeArray(){
+    for (let i = 0; i < numeros.length; i++){
+      resultado = resultado + numeros[i];
+    }
+}
+promedioDeArray();
+console.log(resultado / numeros.length);
+*/
+
+//Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+//Desafío de programación #13: Find the maximum number in an array of numbers
+/*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
 Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
@@ -288,4 +350,5 @@ Desafío de programación #50. Create a function that will receive n as argument
 Desafío de programación #51. Find the frequency of characters inside a string. Return the result as an array of objects. Each object has 2 fields: character and number of occurrences.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
- */
+*/
+
