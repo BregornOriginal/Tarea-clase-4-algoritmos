@@ -20,9 +20,9 @@ for (let i = 1; i <= 10;i = i + 1 ){
 
 /*
 */
- //Desafìo de programación  #2: Imprimí los números impares del 1 al 100
+//Desafìo de programación  #2: Imprimí los números impares del 1 al 100
 
- //1 3 5 ... 99
+//1 3 5 ... 99
 /*
 
  for(let i = 1; i < 100; i = i + 2){
@@ -35,110 +35,120 @@ Desafío de programación #3: Imprimí la tabla de multiplicación del 7
 
 */
 
- //7x0 = 0
- //7x1 = 7
- //...
- //7x9 = 63
+//7x0 = 0
+//7x1 = 7
+//...
+//7x9 = 63
 
- 
- /*
+/*
 Desafío de programación #4: Imprimí todas las tablas de multiplicación del 1 al 9
 
 */
 
+// TABLA DEL 1
 
-
-
-// TABLA DEL 1 
-
-function tablaDelUno(){
-for (let i = 1; i< 10; i++){
-    const multiplicando = 1
+function tablaDelUno() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 1;
     const resultado = multiplicando * i;
     console.log(`${multiplicando} * ${i} = ${resultado}`);
-}
+  }
 }
 
 // TABLA DEL 2
 
-function tablaDelDos(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 2
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelDos() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 2;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 3
 
-function tablaDelTres(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 3
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelTres() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 3;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 4
 
-function tablaDelCuatro(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 4
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelCuatro() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 4;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 5
 
-function tablaDelCinco(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 5
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelCinco() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 5;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 6
 
-function tablaDelSeis(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 6
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelSeis() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 6;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 7
 
-function tablaDelSiete(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 7
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelSiete() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 7;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 8
 
-function tablaDelOcho(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 8
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelOcho() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 8;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
 // TABLA DEL 9
 
-function tablaDelNueve(){
-  for (let i = 1; i< 10; i++){
-      const multiplicando = 9
-      const resultado = multiplicando * i;
-      console.log(`${multiplicando} * ${i} = ${resultado}`);
+function tablaDelNueve() {
+  for (let i = 1; i < 10; i++) {
+    const multiplicando = 9;
+    const resultado = multiplicando * i;
+    console.log(`${multiplicando} * ${i} = ${resultado}`);
   }
-  }
+}
 
+tablaDelOcho()
+
+////// ARRIBA SE REALIZARON TABLAS POR SEPARADO, ABAJO TABLAS DE MULTIPLICACION CON FUNCION//////
+
+function imprimirTablasMultiplicacion(multiplicador, multiplicando) {
+  for (let i = 1; i <= multiplicador; i++) {
+    for (let j = 1; j <= multiplicando; j++) {
+      let multiplicación = i * j;
+      console.log(`${i} * ${j} = ${multiplicación}`);
+    }
+  }
+}
+
+imprimirTablasMultiplicacion(100, 10);
 
 /*
 tablaDelUno()
@@ -152,7 +162,6 @@ tablaDelOcho()
 tablaDelNueve()
   
 */
-
 
 /*
 //Desafío de programación #5: Calcula el resultado de la suma de los numeros del 1 al 10 en un array.
@@ -249,10 +258,28 @@ function promedioDeArray(){
 }
 promedioDeArray();
 console.log(resultado / numeros.length);
+
 */
 
 //Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
+
+/*
+
+function filtrarNumerosPositivos(numeros) {
+  const arrayDeNumerosPositivos = [];
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] >= 0) {
+      arrayDeNumerosPositivos.push(numeros[i]);
+    }
+  } return arrayDeNumerosPositivos
+}
+
+console.log(filtrarNumerosPositivos([-2, -4, -56, -20, 0, 1, -100, -52, 12]));
+
+*/
+
 //Desafío de programación #13: Find the maximum number in an array of numbers
+
 /*
 Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
 
@@ -351,4 +378,3 @@ Desafío de programación #51. Find the frequency of characters inside a string.
 Desafío de programación #52. Calculate Fibonacci(500) with high precision (all decimals)
 Desafío de programación #53. Calculate 70! with high precision (all decimals)
 */
-
