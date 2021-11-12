@@ -135,6 +135,7 @@ function tablaDelNueve() {
   }
 }
 
+/*
 tablaDelOcho()
 
 ////// ARRIBA SE REALIZARON TABLAS POR SEPARADO, ABAJO TABLAS DE MULTIPLICACION CON FUNCION//////
@@ -245,20 +246,18 @@ for ( let i = 0; i < numeros.length; i++){
 }
 
 */
-/*
+
 //Desafío de programación #11: Calcula el promedio de todos los números en un array de números. (en una función)
 
-const numeros = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-let resultado = 0;
-
-function promedioDeArray(){
-    for (let i = 0; i < numeros.length; i++){
-      resultado = resultado + numeros[i];
-    }
+/*
+function promedioDeArray(numeros) {
+  let resultado = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    resultado = resultado + numeros[i];
+  }
+  return resultado / numeros.length;
 }
-promedioDeArray();
-console.log(resultado / numeros.length);
-
+console.log(promedioDeArray([5, 6, 7, 8, 9]));
 */
 
 //Desafío de programación #12: Crea una función que reciba un array de números y devuelva un array conteniendo solo los números positivos
@@ -271,7 +270,8 @@ function filtrarNumerosPositivos(numeros) {
     if (numeros[i] >= 0) {
       arrayDeNumerosPositivos.push(numeros[i]);
     }
-  } return arrayDeNumerosPositivos
+  } 
+  return arrayDeNumerosPositivos
 }
 
 console.log(filtrarNumerosPositivos([-2, -4, -56, -20, 0, 1, -100, -52, 12]));
@@ -281,13 +281,113 @@ console.log(filtrarNumerosPositivos([-2, -4, -56, -20, 0, 1, -100, -52, 12]));
 //Desafío de programación #13: Find the maximum number in an array of numbers
 
 /*
-Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
+function encontrarMinimo(numeros) {
+  let valorMinimo = numeros[0];
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] < valorMinimo) {
+      valorMinimo = numeros[i];
+    }
+  }
+  return valorMinimo;
+}
 
-Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
-El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+function encontrarMaximo(numeros) {
+  let valorMaximo = numeros[0];
+  for (let i = 0; i < numeros.length; i++) {
+    if (numeros[i] > valorMaximo) {
+      valorMaximo = numeros[i];
+    }
+  }
+  return valorMaximo;
+}
 
-Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+console.log(encontrarMinimo([-2, -4, -56, -20, 0, 1, -100, -52, 12]));
 
+console.log(encontrarMaximo([-2, -4, -56, -20, 0, 1, -100, -52, 12]));
+
+*/
+
+//Desafío de programación #14: Imprimir los primeros 10 dígitos de Fibonacci sin recursión
+
+//Fibonacci (lo buscan en google si no lo saben o no se acuerdan)
+//El resultado debería ser: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55
+
+/*
+///////////////////////////////////////////
+
+const fibonacci = (n) => {
+
+  const result = [];
+  let numeroAnterior = 0;
+  let numeroNuevo = 1;
+
+  for(let i = 0; i < n; i++) {
+
+    let numeroAnteriorTemporario = 0;
+
+    if (numeroNuevo < 3) {
+      result.push(numeroAnterior);
+    } else {
+      result.push(numeroNuevo);
+    }
+
+    numeroAnteriorTemporario = numeroAnterior;
+    numeroAnterior = numeroNuevo;
+    numeroNuevo = numeroAnteriorTemporario + numeroNuevo;
+  }
+
+  return result;
+}
+
+//////////////////////////////////////////
+/*
+
+*/
+/*
+////////////////////////////////////////////
+let numeros = [];
+let cantidad = Number(prompt('¿Cuántos números de la sucesión de Fibonacci quieres ver?'))
+function fibonacci(numeros){
+  for(let i = 0; i < (cantidad - 1); i++){
+    if (numeros.length === 0){
+      numeros.push(0)
+    }
+    if(numeros[i] === 0){
+      numeros.push(1)
+    }
+    else{
+      numeros.push(numeros[i] + numeros[i - 1])
+    }
+  } 
+  return numeros
+};
+console.log(`Los primeros ${cantidad} números de la sucesión de Fibonacci son ${fibonacci(numeros)}`)
+
+*/
+////////////////////////////////////////////
+
+/*
+
+// Desafío de programación #15: Crear una función que encuentre el número n de Fibonacci usando recursión
+
+function findFibonacci(n)
+{
+    if (n == 0)
+        return 0;
+        
+    if (n == 1)
+        return 1;
+        
+    return findFibonacci(n - 1) + findFibonacci(n - 2);
+}
+
+let n = findFibonacci(5);
+
+console.log(findFibonacci(n));
+
+*/
+
+/*
 Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
