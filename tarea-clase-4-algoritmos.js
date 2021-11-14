@@ -387,9 +387,57 @@ console.log(findFibonacci(n));
 
 */
 
-/*
-Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+////////////////////////////////////////////
 
+/*
+function fibonacci(n) {
+
+  const result = [];
+  let numeroAnterior = 0;
+  let numeroNuevo = 1;
+
+  for(let i = 0; i < n; i++) {
+
+    let numeroAnteriorTemporario = 0;
+
+    if (numeroNuevo < 3) {
+      result.push(numeroAnterior);
+    } else {
+      result.push(numeroNuevo);
+    }
+
+    numeroAnteriorTemporario = numeroAnterior;
+    numeroAnterior = numeroNuevo;
+    numeroNuevo = numeroAnteriorTemporario + numeroNuevo;
+  }
+
+  return result;
+}
+
+console.log(fibonacci(5));
+
+////////////////////////////////////////////
+
+*/
+
+//Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
+
+// 1, 2, 3, 4, 5, 6, 7, 8
+// numero que no sea igual a si mismo o a uno
+
+function encontrarNumeroPrimo(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  } 
+  return true;
+}
+
+console.log(encontrarNumeroPrimo(Number(prompt("ingresar numero primo"))));
+
+
+/*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
 Ejemplo:
    123 = 1 + 2 + 3 = 6
