@@ -199,14 +199,25 @@ console.log(resultado);
 
 */
 
-/*
 //Desafío de programación #7: Calcula la suma de todos los números impares mayores que 10 y menores que 30
 
-for (let i = 11; i > 10 && i < 30; i = i + 2 ){
-  console.log(i);
+/*
+let numerosImpares = [];
+let suma = 0;
+for (let i = 0; i < 30; i++) {
+  if (i > 10 && i < 30 && i % 2 != 0) {
+    numerosImpares.push(i);
+    
+  }
 }
 
+for(let j = 0; j < numerosImpares.length; j++){
+  suma += numerosImpares[j]
+}
+
+console.log(suma);
 */
+
 //Desafío de programación #8: Crea una función que convierta de Celsius a Fahrenheit
 
 /*
@@ -241,7 +252,7 @@ const numeros = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 let resultado = 0;
 
 for ( let i = 0; i < numeros.length; i++){
-    resultado = resultado + numeros[i];
+    resultado += numeros[i];
     console.log(`${resultado}`);
 }
 
@@ -253,7 +264,7 @@ for ( let i = 0; i < numeros.length; i++){
 function promedioDeArray(numeros) {
   let resultado = 0;
   for (let i = 0; i < numeros.length; i++) {
-    resultado = resultado + numeros[i];
+    resultado += numeros[i];
   }
   return resultado / numeros.length;
 }
@@ -425,17 +436,68 @@ console.log(fibonacci(5));
 // 1, 2, 3, 4, 5, 6, 7, 8
 // numero que no sea igual a si mismo o a uno
 
+
+//////// Se realizó ejercicio de numero primo con console.log
+
+/*
+
+let numero = Number(prompt("Ingrese un número"));
+
+if (numero > 1) {
+  let contador = 0;
+  for (let i = 2; i < numero; i++) {
+    let resto = numero % i;
+    if (resto === 0) {
+      contador += 1;
+    }
+  }
+  if (contador === 0) {
+    alert("Este es un número primo!");
+  } else {
+    alert("Este no es un número primo!");
+  }
+} else {
+  alert("Este no es un número primo");
+}
+
+*/
+/*
 function encontrarNumeroPrimo(n) {
   for (let i = 2; i < n; i++) {
     if (n % i === 0) {
       return false;
     }
-  } 
+  }
   return true;
 }
 
 console.log(encontrarNumeroPrimo(Number(prompt("ingresar numero primo"))));
+*/
 
+/*
+
+function sumarDigitosDeUnNumero(numero) {
+  let sumatoriaDigitos = 0;
+  let divisor = 10;
+
+  while (numero % divisor <= numero) {
+    sumatoriaDigitos += numero % divisor;
+
+    if (numero % divisor === numero) {
+      return sumatoriaDigitos;
+    } else {
+      numero = Math.trunc(numero / divisor);
+    }
+  }
+}
+
+const numeroAEvaluar = Number(prompt("Ingrese un numero (de 2 o mas cifras)"));
+
+alert(
+  `La sumatoria de los digitos de ${numeroAEvaluar} es ${sumarDigitosDeUnNumero(
+    numeroAEvaluar
+  )}`
+);
 
 /*
 Desafío de programación #17: Calcular la suma de los dígitos positivos de un número entero positivo
@@ -445,6 +507,35 @@ Ejemplo:
    1234 = 1 + 2 + 3 + 4 = 10
 
 Desafío de programación #18: Imprimir los primeros 100 números primos
+
+*/
+
+
+
+function imprimirCienNumerosPrimos() {
+  const numerosAImprimir = [];
+  let contadorNumerosPrimos = 100;
+  let numero = 2;
+  while (contadorNumerosPrimos > 0) {
+    let contadorDivisores = 0;
+    for (i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        contadorDivisores++;
+      }
+    }
+    if (contadorDivisores === 0) {
+      numerosAImprimir.push(numero);
+      contadorNumerosPrimos--;
+    }
+    numero++;
+  }
+  return numerosAImprimir;
+}
+
+console.log(imprimirCienNumerosPrimos());
+
+
+/*
 
 Desafío de programación #19: Crear una función que retorne un array con los primeros números "n-primos" mayores que un número particular definido "alComienzo"
 Ejemplo:
