@@ -436,7 +436,6 @@ console.log(fibonacci(5));
 // 1, 2, 3, 4, 5, 6, 7, 8
 // numero que no sea igual a si mismo o a uno
 
-
 //////// Se realizó ejercicio de numero primo con console.log
 
 /*
@@ -509,7 +508,7 @@ Ejemplo:
 Desafío de programación #18: Imprimir los primeros 100 números primos
 
 */
-
+/*
 
 
 function imprimirCienNumerosPrimos() {
@@ -534,9 +533,9 @@ function imprimirCienNumerosPrimos() {
 
 console.log(imprimirCienNumerosPrimos());
 
+*/
 
 /*
-
 Desafío de programación #19: Crear una función que retorne un array con los primeros números 
 
 "n-primos" mayores que un número particular definido "alComienzo"
@@ -544,50 +543,180 @@ Desafío de programación #19: Crear una función que retorne un array con los p
 Ejemplo: 
 Quiero los primeros 4 números primos mayores que 5, el resultado debería ser: [7,11,13,17,19]
 
+
+const encontrarPrimerosNumerosPrimos = (NPrimosAPartirDelNumero,obtenerNumerosPrimos) => {
+
+  const siguientesNumerosPrimos = [];
+  let numero = NPrimosAPartirDelNumero;
+  let numerosPrimos = 0;
+  while (numerosPrimos < obtenerNumerosPrimos) {
+    let contadorDivisores = 0;
+    for (i = 2; i < numero; i++) {
+      if (numero % i === 0) {
+        contadorDivisores++;
+      }
+    }
+    if (contadorDivisores === 0) {
+      siguientesNumerosPrimos.push(numero);
+      numerosPrimos++;
+    }
+    numero++;
+  }
+  return siguientesNumerosPrimos;
+};
+
+console.log(encontrarPrimerosNumerosPrimos(8, 9));
+*/
+
+/*
 Desafío de programación #20: Rotar un array hacia la izquierda una posición
 Ejemplo:
   [9,1,2,3,4] debería quedar como [1,2,3,4,9]
   [5] debería quedar como [5]
   [4,3,2,1] debería quedar como [3,2,1,4]
 
+const rotateArrayToRightOnePosition = (array) => {
+  const arrayRotated = array.shift();
+  array.push(arrayRotated);
+  return newArray = array;
+};
+
+console.log(rotateArrayToRightOnePosition([7, 3, 4, 5, 6]));
+*/
+
+/* 
 Desafío de programación #21: Rotar un array a la derecha una posición
 Ejemplo:
   [2,3,4,1] debería quedar como [1,2,3,4]
   [2,3] debería quedar como [3,2]
 
+*/
+/*
+const rotateArrayToLeftOnePosition = (array) => {
+  const arrayRotated = array.pop();
+  array.unshift(arrayRotated);
+  return newArray = array;
+};
+
+console.log(rotateArrayToLeftOnePosition([3, 4, 5, 6, 2]));
+
+/*
 Desafío de programación #22: Invertir un array
 Ejemplo:
   [1,2,3,4] debería quedar como [4,3,2,1]
   [6,5,4,3,2,1] debería quedar como [1,2,3,4,5,6]
   [5,6,3] debería quedar como [3,6,5]
+*/
 
+/*
+const invertedArray = (array) => {
+  newArray = [];
+  while (array.length > 0) {
+    numeros = array.shift()
+    newArray.unshift(numeros)
+  }
+  return newArray;
+}
+
+console.log(invertedArray([6, 5, 4, 3, 2, 1]));
+/*
+
+/*
 Desafío de programación #23: Invertir una cadena de caracteres
 Ejemplo:
   "dabale arroz a la zorra el abad" debería quedar como "daba le arroz al a zorra elabad"
   "bienvenido" debería quedar como "odinevneib"
+*/
+/*
+const reverseString = (invertedWord) => {
+  let reversedStr = "";
+  for (let i = invertedWord.length - 1; i >= 0; i--) {
+    reversedStr += invertedWord[i];
+  }
+  return reversedStr;
+}
+
+reverseString("amargorPanitnegra");
+*/
+
+/*
 
 Desafío de programación #24: Crear una función que reciba dos dos arrays (arreglos) como argumentos y returne el resultado en un nuevo arreglo
 Ejemplo:
   [1,2,3] con ["a","b","c"] debería quedar como [1,2,3,"a","b","c"]
+*/
 
+/*
+const joinArrays = (array1, array2) => {
+  let oneArray = [...array1, ...array2];
+  return oneArray;
+};
+
+console.log(joinArrays(["a", "b", "c"], [1, 2, 3]));
+/*
 
 Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Nota: Esto se llama "diferencia simétrica" entre conjuntos
 
-Desafío de programación #25: Crear una función que reciba dos arrays (arreglos) de números como argumentos y retorne un array con números que estén en uno u otro array, pero NO en ambos.
 Ejemplo:
   [1,2,3] y [3,7,11] debería devolver [1,2,7,11]
   [5,10,3] y [10,1] debería quedar como [5,3,1]
 
+*/
+/*
+
+const extractNotRepitedNumbers = (array1, array2) => {
+
+  let intersection = array1.filter(x => array2.includes(x));
+  return intersection;
+};
+
+extractNotRepitedNumbers([0, 1, 2, 5, 6, 9], [0, 1, 3, 4, 5, 7, 8, 9])
+*/
+
+/*
+
 Desafío de programación #26: Crear una función que reciba dos arrays de números y retorne un nuevo array con los elementos que se encuentren en el primer array, pero no en el segundo
 Nota; Esto se llama "resta" entre conjuntos
 Ejemplo:
-  [5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+[5,1,2,3,4] y [3,4] debería devolver [5,1,2]
+
+*/
+
+/*
+  const extractNotRepitedNumbers = (array1, array2) => {
+  
+    let difference = array1.filter(x => !array2.includes(x));
+    return intersection;
+  };
+  
+  extractNotRepitedNumbers([0, 1, 2, 5, 6, 9], [0, 1, 3, 4, 5, 7, 8, 9])
+
+*/
+
+/*
 
 Desafío de programación #27: Crear una función que reciba un array de números como argumento y retorne un array con los elementos distintos
 Ejemplo:
    [1,2,3,4,5,4,3,2,1,0] debería retornar [1,2,3,4,5,0]
 
+*/
+
+/*
+const extractDifferentNumbers = (array) => {
+  let newArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].indexOf(array) === -1){
+      newArray.push(array[i]);
+    }
+  }
+return newArray;
+};
+
+console.log(extractDifferentNumbers([1, 2, 3, 4, 5, 4, 3, 2, 1, 0]));
+
+/*
 
 ==== FALTAN TRADUCIR
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
