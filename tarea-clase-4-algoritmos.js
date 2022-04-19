@@ -718,6 +718,102 @@ console.log(extractDifferentNumbers([1, 2, 3, 4, 5, 4, 3, 2, 1, 0]));
 
 /*
 
+////////////////////// INICIO EJERCICIOS DE HACKER RANK ////////////////////////////////////
+
+function plusMinus(arr) {
+    
+  let amountOfPositiveNumbers = 0;
+  let amountOfNegativeNumbers = 0;
+  let amountOfZeroNumbers = 0;
+  
+  for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 0) {
+          amountOfPositiveNumbers++;
+      }
+      if (arr[i] < 0) {
+          amountOfNegativeNumbers++
+      }       
+      if (arr[i] === 0) {
+          amountOfZeroNumbers++;
+      }
+  }
+  let proportionOfPositiveNumbers = amountOfPositiveNumbers / arr.length;
+  let proportionOfNegativeNumbers = amountOfNegativeNumbers / arr.length;
+  let proportionOfZeroNumbers = amountOfZeroNumbers / arr.length;
+  
+  proportionOfPositiveNumbers = (proportionOfPositiveNumbers).toFixed(6);
+  proportionOfNegativeNumbers = (proportionOfNegativeNumbers).toFixed(6);
+  proportionOfZeroNumbers = (proportionOfZeroNumbers).toFixed(6);
+
+  console.log (proportionOfPositiveNumbers);
+  console.log(proportionOfNegativeNumbers);
+  console.log(proportionOfZeroNumbers);
+  
+}
+
+console.log (plusMinus([1, 3, 0, 0, 0, -1, -2, -5, -1000]));
+
+*/
+/*
+function staircase(n) {
+  for (let x = 1; x <= n; x++) {
+    console.log(" ".repeat(n - x) + "#".repeat(x));
+  }
+};
+
+staircase(5);
+*/
+
+/*
+function birthdayCakeCandles(candles) {
+  let tallestCandles = 0;
+  let max = Math.max(...candles);
+
+  console.log(Math.max(...candles));
+  for (let i = 0; i < candles.length; i++) {
+    if (candles[i] === max) {
+      tallestCandles++;
+    }
+  }
+  return tallestCandles;
+}
+
+console.log(birthdayCakeCandles([2, 2, 3, 4, 5, 5, 5]));
+*/
+
+/*
+function breakingRecords(scores) {
+
+  let maximumScore = scores[0];
+  let minimumScore = scores[0];
+  let highestRecord = 0;
+  let lowestRecord = 0;
+  const resultOfBreakingRecords = [];
+
+  for (let i = 0; i < scores.length; i++) {
+    if (scores[i] > maximumScore) {
+      maximumScore = scores[i];
+      highestRecord++;
+    } if (scores[i] < minimumScore) {
+      minimumScore = scores[i];
+      lowestRecord++;
+    }
+  }
+  resultOfBreakingRecords.push(highestRecord);
+  resultOfBreakingRecords.push(lowestRecord);
+
+  return resultOfBreakingRecords;
+};
+
+console.log(breakingRecords([5, 30, 5, 50, 4, 30, 60, 61, 2]))
+
+////////////////////// FIN EJERCICIOS DE HACKER RANK ////////////////////////////////////
+*/
+
+
+
+/*
+
 ==== FALTAN TRADUCIR
 Desafío de programación #28: Calculate the sum of first 100 prime numbers
 Desafío de programación #29: Print the distance between the first 100 prime numbers
